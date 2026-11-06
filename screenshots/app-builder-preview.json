@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "ShiftNear — Find nearby businesses. Get discovered.",
+      "hasCanvas": false,
+      "bodyTextLen": 2820,
+      "bodyTextHash": "f4764e267660195822ec39cdcb90f618c8e7d3d9d913e360b32a88555dac7dc2",
+      "bodyTextPrefix": "Skip to content ShiftNear About Customers Vendors Webinar Dreams",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "ShiftNear — Find nearby businesses. Get discovered.",
+      "hasCanvas": false,
+      "bodyTextLen": 2752,
+      "bodyTextHash": "0e7d7567ecd013200d86b18a73a83019d6b05fab5aa2aef7a1ad2e94cd551861",
+      "bodyTextPrefix": "Skip to content ShiftNear Open menu PRE-LAUNCH · NIGERIA Find wh",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
