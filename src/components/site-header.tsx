@@ -3,12 +3,10 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const LINKS = [
-  { to: "/about", label: "About" },
-  { to: "/customers", label: "Customers" },
-  { to: "/vendors", label: "Vendors" },
-  { to: "/webinar", label: "Webinar" },
-  { to: "/dreamshifter", label: "Dreamshifter" },
-  { to: "/challenge", label: "Challenge" },
+  { to: "/", label: "Home" },
+  { to: "/dreamshifter", label: "About" },
+  { to: "/customers", label: "ShiftNear" },
+  { to: "/challenge", label: "Initiatives" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
@@ -18,19 +16,21 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-20 border-b border-line bg-paper/95 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5 md:h-[4.5rem] md:px-8">
-        <Link to="/" className="flex items-center gap-2.5 font-extrabold tracking-tight" onClick={() => setOpen(false)}>
-          <img src="/media/logo.png" alt="" width={32} height={32} className="size-8" />
-          <span className="text-lg">
-            Shift<span className="text-brand">Near</span>
+        <Link to="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
+          <span className="flex size-9 items-center justify-center bg-ink text-lg font-extrabold tracking-[-.08em] text-emerald-300">D.</span>
+          <span className="leading-tight">
+            <span className="block text-sm font-extrabold tracking-tight">DREAMSHIFTER</span>
+            <span className="block text-[0.62rem] font-bold tracking-[.19em] text-muted">TECH HUB</span>
           </span>
         </Link>
 
-        <nav aria-label="Main" className="hidden items-center gap-5 lg:flex">
+        <nav aria-label="Main" className="hidden items-center gap-7 lg:flex">
           {LINKS.map((item) => (
             <Link
               key={item.to}
               to={item.to}
-              activeProps={{ className: "text-sm font-semibold text-ink" }}
+              activeOptions={{ exact: item.to === "/" }}
+              activeProps={{ className: "text-sm font-extrabold text-ink" }}
               inactiveProps={{ className: "text-sm font-semibold text-muted hover:text-ink" }}
             >
               {item.label}
@@ -39,11 +39,8 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Link
-            to="/webinar"
-            className="hidden min-h-11 items-center bg-brand px-4 text-sm font-semibold text-paper hover:bg-brand-deep sm:inline-flex"
-          >
-            Reserve a seat
+          <Link to="/contact" className="hidden min-h-11 items-center bg-brand px-4 text-sm font-bold text-white hover:bg-brand-deep sm:inline-flex">
+            Work with us
           </Link>
           <button
             type="button"
@@ -61,27 +58,13 @@ export function SiteHeader() {
       {open ? (
         <nav id="mobile-nav" aria-label="Mobile" className="border-t border-line bg-paper px-5 py-3 lg:hidden">
           {LINKS.map((item) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              onClick={() => setOpen(false)}
-              activeProps={{
-                className: "flex min-h-11 items-center border-b border-line text-sm font-semibold text-brand-deep last:border-0",
-              }}
-              inactiveProps={{
-                className: "flex min-h-11 items-center border-b border-line text-sm font-semibold text-ink last:border-0",
-              }}
-            >
+            <Link key={item.to} to={item.to} onClick={() => setOpen(false)}
+              activeProps={{ className: "flex min-h-11 items-center border-b border-line text-sm font-bold text-brand-deep last:border-0" }}
+              inactiveProps={{ className: "flex min-h-11 items-center border-b border-line text-sm font-semibold text-ink last:border-0" }}>
               {item.label}
             </Link>
           ))}
-          <Link
-            to="/webinar"
-            onClick={() => setOpen(false)}
-            className="mt-3 flex min-h-11 items-center justify-center bg-brand text-sm font-semibold text-paper"
-          >
-            Reserve a seat
-          </Link>
+          <Link to="/contact" onClick={() => setOpen(false)} className="mt-3 flex min-h-11 items-center justify-center bg-brand text-sm font-bold text-white">Work with us</Link>
         </nav>
       ) : null}
     </header>
