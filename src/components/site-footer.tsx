@@ -18,7 +18,6 @@ export function SiteFooter() {
         </div>
         <div className="flex flex-wrap items-center justify-between gap-3 border-t border-line pt-5 text-xs text-faint">
           <span>© {new Date().getFullYear()} Dreamshifter Tech Hub. All rights reserved.</span>
-          <Link to="/admin" className="font-semibold hover:text-ink">Team desk</Link>
         </div>
       </div>
     </footer>
