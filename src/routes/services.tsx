@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight, Code2, Headset, Layers3, MonitorSmartphone, Palette, GraduationCap, Clapperboard, Lightbulb } from "lucide-react";
+import { ArrowUpRight, Code2, Headset, MonitorSmartphone, Palette, GraduationCap, Clapperboard, Lightbulb } from "lucide-react";
 import { PageIntro, SiteShell, Wrap } from "@/components/site-shell";
 
 export const Route = createFileRoute("/services")({
