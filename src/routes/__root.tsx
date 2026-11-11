@@ -13,7 +13,7 @@ export const Route = createRootRoute({
         name: "description",
         content: "Dreamshifter Tech Hub is a technology innovation company building digital products, developing practical solutions and creating opportunities through technology.",
       },
-      { name: "theme-color", content: "#087F5B" },
+      { name: "theme-color", content: "#111C32" },
     ],
     links: [
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
