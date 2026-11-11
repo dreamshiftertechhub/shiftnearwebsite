@@ -19,6 +19,9 @@ import { Route as CustomersRouteImport } from './routes/customers'
 import { Route as DreamshifterRouteImport } from './routes/dreamshifter'
 import { Route as VendorsRouteImport } from './routes/vendors'
 import { Route as WebinarRouteImport } from './routes/webinar'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as ProjectsRouteImport } from './routes/projects'
+import { Route as InitiativesRouteImport } from './routes/initiatives'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -70,6 +73,21 @@ const WebinarRoute = WebinarRouteImport.update({
   path: '/webinar',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsRoute = ProjectsRouteImport.update({
+  id: '/projects',
+  path: '/projects',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InitiativesRoute = InitiativesRouteImport.update({
+  id: '/initiatives',
+  path: '/initiatives',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -82,6 +100,9 @@ export interface FileRoutesByFullPath {
   '/dreamshifter': typeof DreamshifterRoute
   '/vendors': typeof VendorsRoute
   '/webinar': typeof WebinarRoute
+  '/services': typeof ServicesRoute
+  '/projects': typeof ProjectsRoute
+  '/initiatives': typeof InitiativesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -94,6 +115,9 @@ export interface FileRoutesByTo {
   '/dreamshifter': typeof DreamshifterRoute
   '/vendors': typeof VendorsRoute
   '/webinar': typeof WebinarRoute
+  '/services': typeof ServicesRoute
+  '/projects': typeof ProjectsRoute
+  '/initiatives': typeof InitiativesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -107,6 +131,9 @@ export interface FileRoutesById {
   '/dreamshifter': typeof DreamshifterRoute
   '/vendors': typeof VendorsRoute
   '/webinar': typeof WebinarRoute
+  '/services': typeof ServicesRoute
+  '/projects': typeof ProjectsRoute
+  '/initiatives': typeof InitiativesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -121,6 +148,9 @@ export interface FileRouteTypes {
     | '/dreamshifter'
     | '/vendors'
     | '/webinar'
+    | '/services'
+    | '/projects'
+    | '/initiatives'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -133,6 +163,9 @@ export interface FileRouteTypes {
     | '/dreamshifter'
     | '/vendors'
     | '/webinar'
+    | '/services'
+    | '/projects'
+    | '/initiatives'
   id:
     | '__root__'
     | '/'
@@ -145,6 +178,9 @@ export interface FileRouteTypes {
     | '/dreamshifter'
     | '/vendors'
     | '/webinar'
+    | '/services'
+    | '/projects'
+    | '/initiatives'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -158,6 +194,9 @@ export interface RootRouteChildren {
   DreamshifterRoute: typeof DreamshifterRoute
   VendorsRoute: typeof VendorsRoute
   WebinarRoute: typeof WebinarRoute
+  ServicesRoute: typeof ServicesRoute
+  ProjectsRoute: typeof ProjectsRoute
+  InitiativesRoute: typeof InitiativesRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -232,6 +271,9 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WebinarRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services': { id: '/services'; path: '/services'; fullPath: '/services'; preLoaderRoute: typeof ServicesRouteImport; parentRoute: typeof rootRouteImport }
+    '/projects': { id: '/projects'; path: '/projects'; fullPath: '/projects'; preLoaderRoute: typeof ProjectsRouteImport; parentRoute: typeof rootRouteImport }
+    '/initiatives': { id: '/initiatives'; path: '/initiatives'; fullPath: '/initiatives'; preLoaderRoute: typeof InitiativesRouteImport; parentRoute: typeof rootRouteImport }
   }
 }
 
@@ -246,6 +288,9 @@ const rootRouteChildren: RootRouteChildren = {
   DreamshifterRoute: DreamshifterRoute,
   VendorsRoute: VendorsRoute,
   WebinarRoute: WebinarRoute,
+  ServicesRoute: ServicesRoute,
+  ProjectsRoute: ProjectsRoute,
+  InitiativesRoute: InitiativesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
