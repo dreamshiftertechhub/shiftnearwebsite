@@ -1,5 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight } from "lucide-react";
 import { PageIntro, SiteShell, Wrap } from "@/components/site-shell";
 
 export const Route = createFileRoute("/projects")({
