@@ -5,8 +5,9 @@ import { useState } from "react";
 const LINKS = [
   { to: "/", label: "Home" },
   { to: "/dreamshifter", label: "About" },
-  { to: "/customers", label: "ShiftNear" },
-  { to: "/challenge", label: "Initiatives" },
+  { to: "/services", label: "What we do" },
+  { to: "/projects", label: "Products & projects" },
+  { to: "/initiatives", label: "Initiatives" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
@@ -17,7 +18,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-20 border-b border-line bg-paper/95 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5 md:h-[4.5rem] md:px-8">
         <Link to="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
-          <span className="flex size-9 items-center justify-center bg-ink text-lg font-extrabold tracking-[-.08em] text-emerald-300">D.</span>
+          <span className="flex size-9 items-center justify-center bg-ink text-lg font-extrabold tracking-[-.08em] text-orange-400">D.</span>
           <span className="leading-tight">
             <span className="block text-sm font-extrabold tracking-tight">DREAMSHIFTER</span>
             <span className="block text-[0.62rem] font-bold tracking-[.19em] text-muted">TECH HUB</span>
