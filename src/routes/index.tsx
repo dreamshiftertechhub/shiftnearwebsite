@@ -41,15 +41,15 @@ function HomePage() {
         <div className="pointer-events-none absolute -right-8 -top-12 size-[23rem] rounded-full border border-white/10" />
         <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 md:px-8 md:py-28 lg:grid-cols-[1.15fr_0.85fr]">
           <div>
-            <p className="kicker text-emerald-300">Technology · Innovation · Impact</p>
+            <p className="kicker text-orange-300">Technology · Innovation · Impact</p>
             <h1 className="mt-6 max-w-3xl text-[clamp(2.8rem,6vw,5.3rem)] leading-[1.02] font-extrabold tracking-[-0.065em] text-balance">
-              We turn ambitious ideas into <span className="text-emerald-300">impactful technology.</span>
+              We turn ambitious ideas into <span className="text-orange-300">impactful technology.</span>
             </h1>
             <p className="mt-6 max-w-xl text-base leading-8 text-white/70 md:text-lg">
               Dreamshifter Tech Hub is a technology innovation company building digital products, developing practical solutions and creating opportunities through technology.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
-              <a href="#our-work" className="inline-flex min-h-12 items-center bg-emerald-400 px-5 text-sm font-extrabold text-ink transition hover:bg-emerald-300">
+              <a href="#our-work" className="inline-flex min-h-12 items-center bg-orange-400 px-5 text-sm font-extrabold text-ink transition hover:bg-orange-300">
                 Explore what we do
               </a>
               <Link to="/contact" className="inline-flex min-h-12 items-center border border-white/25 px-5 text-sm font-bold text-white transition hover:bg-white/10">
@@ -71,7 +71,7 @@ function HomePage() {
                   <span className="size-2 rounded-full bg-emerald-300" />
                 </div>
                 <div className="py-8">
-                  <div className="flex size-24 items-center justify-center border border-emerald-300/50 text-5xl font-extrabold tracking-[-.1em] text-emerald-300">D.</div>
+                  <div className="flex size-24 items-center justify-center border border-emerald-300/50 text-5xl font-extrabold tracking-[-.1em] text-orange-300">D.</div>
                   <p className="mt-8 max-w-xs text-3xl font-extrabold leading-tight tracking-[-.045em]">Ideas deserve to become something real.</p>
                 </div>
                 <div className="flex items-end justify-between border-t border-white/15 pt-5">
@@ -79,7 +79,7 @@ function HomePage() {
                     <p className="text-xs text-white/45">OUR FOCUS</p>
                     <p className="mt-1 text-sm font-bold text-white">Build · Improve · Empower</p>
                   </div>
-                  <span className="text-xs text-emerald-300">DS / TECH HUB</span>
+                  <span className="text-xs text-orange-300">DS / TECH HUB</span>
                 </div>
               </div>
             </div>
@@ -157,7 +157,7 @@ function HomePage() {
         </Wrap>
       </section>
 
-      <section className="border-b border-line bg-[#eaf2ed]">
+      <section className="border-b border-line bg-[#f7eee7]">
         <Wrap>
           <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-center">
             <div>
@@ -187,11 +187,11 @@ function HomePage() {
         <Wrap>
           <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
             <div>
-              <p className="kicker text-emerald-300">Let's build what comes next</p>
+              <p className="kicker text-orange-300">Let's build what comes next</p>
               <h2 className="mt-4 max-w-2xl text-3xl leading-tight font-extrabold tracking-[-.045em] md:text-5xl">Have an idea, a challenge or a reason to collaborate?</h2>
               <p className="mt-4 max-w-xl text-sm leading-7 text-white/65">We would like to hear what you are working on and explore how technology can help move it forward.</p>
             </div>
-            <Link to="/contact" className="inline-flex min-h-12 shrink-0 items-center bg-emerald-400 px-5 text-sm font-extrabold text-ink hover:bg-emerald-300">Contact Dreamshifter</Link>
+            <Link to="/contact" className="inline-flex min-h-12 shrink-0 items-center bg-orange-400 px-5 text-sm font-extrabold text-ink hover:bg-orange-300">Contact Dreamshifter</Link>
           </div>
         </Wrap>
       </section>
