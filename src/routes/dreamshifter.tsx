@@ -2,72 +2,31 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageIntro, SiteShell, Wrap } from "@/components/site-shell";
 
 export const Route = createFileRoute("/dreamshifter")({
-  head: () => ({
-    meta: [
-      { title: "About Dreamshifter Tech Hub" },
-      {
-        name: "description",
-        content: "Learn about Dreamshifter Tech Hub, a technology innovation company building digital products, developing solutions and creating opportunities through technology.",
-      },
-    ],
-  }),
+  head: () => ({ meta: [
+    { title: "About Dreamshifter Tech Hub" },
+    { name: "description", content: "Meet the founder and learn how Dreamshifter Tech Hub approaches digital products, technology and practical learning." },
+  ]}),
   component: AboutDreamshifterPage,
 });
 
-const VALUES = [
-  ["Purpose before technology", "We begin with the people and the problem. Technology matters when it makes something meaningfully better."],
-  ["Ideas into action", "We value thoughtful execution: turning concepts into clear plans, useful products and experiences people can use."],
-  ["Learn, adapt and improve", "We stay curious, listen to feedback and treat progress as an ongoing process rather than a one-time event."],
-  ["Create room for others", "We believe technology should open doors to learning, collaboration and new opportunities."],
+const APPROACH = [
+  ["Understand the real need", "We start by listening. What needs to change? Who is the solution for? What would a useful result look like?"],
+  ["Choose the right tool", "Not every problem needs an app. Not every business needs a complicated platform. We recommend what fits the need."],
+  ["Design and build", "We shape the experience, plan the work and use the right tools to bring the solution to life."],
+  ["Review and improve", "We test what we make, learn from feedback and identify what should happen next."],
 ];
 
 function AboutDreamshifterPage() {
-  return (
-    <SiteShell>
-      <PageIntro
-        eyebrow="About Dreamshifter Tech Hub"
-        title="A technology company built around ideas that move people forward."
-        lede="Dreamshifter Tech Hub exists to turn ambitious ideas into meaningful technology experiences. We build digital products, develop practical solutions and create opportunities through technology."
-      />
-      <Wrap>
-        <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
-          <div>
-            <p className="eyebrow">Our belief</p>
-            <h2 className="title mt-4">Innovation is not just about what technology can do. It is about what people can do with it.</h2>
-          </div>
-          <div className="space-y-4 text-sm leading-7 text-muted">
-            <p>We see technology as a tool for progress. The right digital product can make a service easier to access. A thoughtful experience can help a business connect with the people it serves. A learning opportunity can help someone take their next step.</p>
-            <p>That is why Dreamshifter brings product thinking, design, technology and a commitment to learning together. We are building our own products and initiatives while exploring collaborations that solve real needs.</p>
-          </div>
-        </div>
-      </Wrap>
-      <section className="border-y border-line bg-card">
-        <Wrap>
-          <p className="eyebrow">What guides us</p>
-          <h2 className="title mt-4 max-w-xl">The principles behind the work.</h2>
-          <div className="mt-9 grid border-t border-line md:grid-cols-2">
-            {VALUES.map(([title, body], index) => (
-              <article key={title} className={`border-b border-line py-7 md:px-7 md:py-8 ${index % 2 ? "md:border-l" : "md:pl-0"}`}>
-                <span className="text-xs font-extrabold tracking-widest text-brand">0{index + 1}</span>
-                <h3 className="mt-3 font-extrabold tracking-tight">{title}</h3>
-                <p className="mt-2 text-sm leading-7 text-muted">{body}</p>
-              </article>
-            ))}
-          </div>
-        </Wrap>
-      </section>
-      <Wrap>
-        <div className="grid items-center gap-10 lg:grid-cols-[260px_1fr]">
-          <img src="/media/ayinde.jpg" alt="Ayinde Olatunde Emmanuel, founder of Dreamshifter Tech Hub" className="aspect-[4/5] w-full max-w-xs object-cover object-[center_18%]" />
-          <div>
-            <p className="eyebrow">Founder</p>
-            <h2 className="title mt-4">Ayinde Olatunde Emmanuel</h2>
-            <p className="mt-4 max-w-2xl text-sm leading-7 text-muted">Dreamshifter Tech Hub was founded by Ayinde Olatunde Emmanuel, a product designer, project manager and technology entrepreneur interested in building useful digital experiences and creating opportunities through technology.</p>
-            <p className="mt-3 max-w-2xl text-sm leading-7 text-muted">The company’s work is guided by a simple belief: good ideas deserve the clarity, craft and commitment needed to become real.</p>
-            <Link to="/contact" className="mt-6 inline-flex min-h-11 items-center bg-brand px-4 text-sm font-bold text-white hover:bg-brand-deep">Connect with Dreamshifter</Link>
-          </div>
-        </div>
-      </Wrap>
-    </SiteShell>
-  );
+  return <SiteShell>
+    <PageIntro eyebrow="About Dreamshifter" title="Technology should create opportunities, not complications." lede="Dreamshifter Tech Hub is a founder-led digital agency and technology training provider. We design digital products, build business solutions and help people develop practical skills for the digital world." />
+    <Wrap>
+      <div className="grid gap-10 lg:grid-cols-[.8fr_1.2fr]">
+        <div><p className="eyebrow">Our story</p><h2 className="title mt-4">Built on curiosity. Driven by execution.</h2></div>
+        <div className="space-y-4 text-sm leading-7 text-muted"><p>Dreamshifter was founded by Ayinde Emmanuel Olatunde, a Digital Product Specialist and Project Manager with a B.Tech in Project Management Technology.</p><p>His work brings together product design, technology operations and project delivery. He is interested in how digital experiences can solve everyday problems, how businesses can use technology more effectively and how emerging talent can gain the practical experience needed to contribute.</p><p>Dreamshifter is being built as more than a service brand: it is a growing technology company developing digital products, delivering client solutions and creating pathways into practical tech work.</p></div>
+      </div>
+    </Wrap>
+    <section className="border-y border-line bg-card"><Wrap><p className="eyebrow">Our mission</p><h2 className="title mt-4 max-w-3xl">Make useful technology, quality digital solutions and practical tech education more accessible.</h2><div className="mt-10 grid gap-8 md:grid-cols-2"><div><p className="eyebrow">Our vision</p><p className="mt-3 text-lg font-bold leading-8">Build a technology company known for valuable digital products, thoughtful problem-solving and opportunities for emerging talent.</p></div><div><p className="eyebrow">Our belief</p><p className="mt-3 text-lg font-bold leading-8">Ideas matter. Execution makes the difference.</p></div></div></Wrap></section>
+    <Wrap><p className="eyebrow">How we work</p><h2 className="title mt-4 max-w-2xl">A clear process. No unnecessary complexity.</h2><div className="mt-8 grid border-t border-line sm:grid-cols-2">{APPROACH.map(([title,body],i)=><article key={title} className="border-b border-line py-6 sm:px-7"><span className="text-xs font-extrabold text-brand">0{i+1}</span><h3 className="mt-3 font-extrabold">{title}</h3><p className="mt-2 text-sm leading-7 text-muted">{body}</p></article>)}</div></Wrap>
+    <section className="border-y border-line bg-[#f2eee8]"><Wrap><div className="grid items-center gap-8 md:grid-cols-[190px_1fr]"><div className="grid aspect-square max-w-[190px] place-items-center bg-[#17243a] text-5xl font-black tracking-tight text-orange-400">AO.</div><div><p className="eyebrow">Founder & lead specialist</p><h2 className="title mt-3">Ayinde Emmanuel Olatunde</h2><p className="mt-2 font-bold text-muted">Founder · Digital Product Specialist · Project Manager</p><p className="mt-4 max-w-2xl text-sm leading-7 text-muted">Ayinde leads the direction, product thinking and delivery of Dreamshifter Tech Hub. He holds a B.Tech in Project Management Technology and works across digital product design, technology and project coordination.</p><p className="mt-3 max-w-2xl text-sm leading-7 text-muted">His focus is on turning real needs into clear plans, useful digital experiences and work that can stand on its own.</p><Link to="/contact" className="mt-6 inline-flex min-h-11 items-center bg-brand px-4 text-sm font-bold text-white">Work with Dreamshifter</Link></div></div></Wrap></section>
+  </SiteShell>;
 }
