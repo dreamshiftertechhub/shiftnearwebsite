@@ -1,25 +1,12 @@
 import { Link } from "@tanstack/react-router";
 
 export function SiteFooter() {
-  return (
-    <footer className="border-t border-line bg-paper">
-      <div className="mx-auto flex max-w-6xl flex-col gap-8 px-5 py-10 md:px-8">
-        <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-          <div>
-            <p className="text-lg font-extrabold tracking-tight">DREAMSHIFTER <span className="text-brand">TECH HUB</span></p>
-            <p className="mt-2 max-w-sm text-sm leading-relaxed text-muted">Empowering Dreams, Driving Change. Building digital products and technology-led solutions with purpose.</p>
-          </div>
-          <nav aria-label="Footer" className="flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold text-muted">
-            <><Link to="/dreamshifter" className="hover:text-ink">About</Link><Link to="/services" className="hover:text-ink">What we do</Link></>
-            <Link to="/projects" className="hover:text-ink">Products & projects</Link>
-            <Link to="/initiatives" className="hover:text-ink">Initiatives</Link>
-            <Link to="/contact" className="hover:text-ink">Contact</Link>
-          </nav>
-        </div>
-        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-line pt-5 text-xs text-faint">
-          <span>© {new Date().getFullYear()} Dreamshifter Tech Hub. All rights reserved.</span>
-        </div>
-      </div>
-    </footer>
-  );
+  return <footer className="border-t border-line bg-paper"><div className="mx-auto max-w-6xl px-5 py-10 md:px-8">
+    <div className="grid gap-8 md:grid-cols-[1.2fr_.8fr_.8fr]">
+      <div><p className="text-lg font-black tracking-tight">DREAMSHIFTER <span className="text-brand">TECH HUB</span></p><p className="mt-3 max-w-sm text-sm leading-7 text-muted">We design digital products, build technology solutions and help people develop practical skills for the digital world.</p></div>
+      <div><p className="text-xs font-extrabold tracking-[.14em] text-ink">EXPLORE</p><div className="mt-4 grid gap-3 text-sm font-semibold text-muted"><Link to="/dreamshifter" className="hover:text-brand">About</Link><Link to="/services" className="hover:text-brand">Services</Link><Link to="/projects" className="hover:text-brand">Our work</Link><Link to="/academy" className="hover:text-brand">Academy</Link><Link to="/contact" className="hover:text-brand">Contact</Link></div></div>
+      <div><p className="text-xs font-extrabold tracking-[.14em] text-ink">OUR ECOSYSTEM</p><div className="mt-4 grid gap-3 text-sm font-semibold text-muted"><Link to="/shiftnear" className="hover:text-brand">Shiftnear</Link><Link to="/challenge" className="hover:text-brand">The DShift Challenge</Link><Link to="/initiatives" className="hover:text-brand">Other initiatives</Link></div></div>
+    </div>
+    <div className="mt-9 flex flex-wrap justify-between gap-3 border-t border-line pt-5 text-xs text-faint"><span>Built with purpose. Driven by possibility.</span><span>© {new Date().getFullYear()} Dreamshifter Tech Hub. All rights reserved.</span></div>
+  </div></footer>;
 }
