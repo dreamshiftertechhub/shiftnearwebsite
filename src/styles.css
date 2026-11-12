@@ -4,30 +4,30 @@
   --font-sans: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Archivo", "Source Sans 3", ui-sans-serif, sans-serif;
   --font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
-  --color-paper: #f8f9fb;
+  --color-paper: #f8f9fc;
   --color-card: #ffffff;
-  --color-ink: #17243a;
+  --color-ink: #142b72;
   --color-muted: #596579;
   --color-faint: #8993a1;
-  --color-line: #dce2ea;
-  --color-brand: #df6818;
-  --color-brand-deep: #b94e0b;
+  --color-line: #dce2ec;
+  --color-brand: #ed741c;
+  --color-brand-deep: #c65b10;
   --color-tint: #fff0e5;
   --color-danger: #8f3030;
   --color-warn: #7a5200;
   --color-warn-bg: #fff6e4;
-  --radius-sm: 0.25rem;
-  --radius-md: 0.375rem;
-  --radius-lg: 0.625rem;
+  --radius-sm: 0.2rem;
+  --radius-md: 0.3rem;
+  --radius-lg: 0.45rem;
 }
 
 @layer base {
   html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-  body { margin: 0; background: var(--color-paper); color: var(--color-ink); font-family: var(--font-sans); line-height: 1.6; }
+  body { margin: 0; background: var(--color-paper); color: var(--color-ink); font-family: var(--font-sans); line-height: 1.65; }
   h1, h2, h3, h4, .font-display { font-family: var(--font-display); }
   button:not(:disabled), [role="button"]:not(:disabled) { cursor: pointer; }
   :focus-visible { outline: 2px solid var(--color-brand); outline-offset: 2px; }
-  ::selection { background: var(--color-tint); color: var(--color-ink); }
+  ::selection { background: #fbe0ca; color: #142b72; }
 }
 
 @utility eyebrow { font-size: .68rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--color-brand); }
