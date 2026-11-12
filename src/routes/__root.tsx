@@ -8,9 +8,9 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
-      { title: "Dreamshifter Tech Hub — We design. We build. We move ideas forward." },
+      { title: "Dreamshifter Tech Hub — Digital products. Built with purpose." },
       { name: "description", content: "Digital product design, web development, business technology solutions and practical tech training from Dreamshifter Tech Hub." },
-      { name: "theme-color", content: "#17243A" },
+      { name: "theme-color", content: "#142B72" },
     ],
     links: [
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
