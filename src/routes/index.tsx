@@ -1,200 +1,93 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowUpRight } from "lucide-react";
 import { SiteShell, Wrap } from "@/components/site-shell";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Dreamshifter Tech Hub — Building what moves ideas forward" },
-      {
-        name: "description",
-        content:
-          "Dreamshifter Tech Hub is a technology innovation company building digital products, developing practical solutions and creating opportunities through technology.",
-      },
-    ],
-  }),
+  head: () => ({ meta: [
+    { title: "Dreamshifter Tech Hub — We design. We build. We move ideas forward." },
+    { name: "description", content: "Digital product design, web development, business technology solutions and practical tech training from Dreamshifter Tech Hub." },
+  ]}),
   component: HomePage,
 });
 
-const PILLARS = [
-  {
-    number: "01",
-    title: "Digital products",
-    body: "We turn useful ideas into thoughtful digital experiences, from early product thinking and interface design to development and iteration.",
-  },
-  {
-    number: "02",
-    title: "Technology solutions",
-    body: "We help organisations solve practical problems with well-considered websites, digital tools and technology support.",
-  },
-  {
-    number: "03",
-    title: "Learning and opportunity",
-    body: "We create room for people to build confidence, develop digital skills and take part in the opportunities technology creates.",
-  },
+const SERVICES = [
+  ["01", "Digital product design", "Websites and apps designed around the people who use them.", "/services"],
+  ["02", "Web development", "Fast, responsive websites and web applications built for real business needs.", "/services"],
+  ["03", "Business technology", "Practical digital systems and technical support that help work run better.", "/services"],
+  ["04", "Tech training", "Hands-on learning in UI/UX, web creation and modern AI workflows.", "/academy"],
+];
+
+const WORK = [
+  ["Restaurant & hospitality", "Web experiences and digital systems for restaurants and coffee shops."],
+  ["Real estate", "Property-focused digital experiences built to present listings and attract enquiries."],
+  ["E-commerce", "Online storefront concepts and shopping experiences, including Bollypet."],
+  ["Fintech", "Digital finance product concepts and mobile interface design."],
 ];
 
 function HomePage() {
-  return (
-    <SiteShell>
-      <section className="relative overflow-hidden border-b border-line bg-ink text-paper">
-        <div className="pointer-events-none absolute -right-24 -top-28 size-[34rem] rounded-full border border-white/10" />
-        <div className="pointer-events-none absolute -right-8 -top-12 size-[23rem] rounded-full border border-white/10" />
-        <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 md:px-8 md:py-28 lg:grid-cols-[1.15fr_0.85fr]">
-          <div>
-            <p className="kicker text-orange-300">Technology · Innovation · Impact</p>
-            <h1 className="mt-6 max-w-3xl text-[clamp(2.8rem,6vw,5.3rem)] leading-[1.02] font-extrabold tracking-[-0.065em] text-balance">
-              We turn ambitious ideas into <span className="text-orange-300">impactful technology.</span>
-            </h1>
-            <p className="mt-6 max-w-xl text-base leading-8 text-white/70 md:text-lg">
-              Dreamshifter Tech Hub is a technology innovation company building digital products, developing practical solutions and creating opportunities through technology.
-            </p>
-            <div className="mt-9 flex flex-wrap gap-3">
-              <a href="#our-work" className="inline-flex min-h-12 items-center bg-orange-400 px-5 text-sm font-extrabold text-ink transition hover:bg-orange-300">
-                Explore what we do
-              </a>
-              <Link to="/contact" className="inline-flex min-h-12 items-center border border-white/25 px-5 text-sm font-bold text-white transition hover:bg-white/10">
-                Start a conversation
-              </Link>
-            </div>
-            <div className="mt-14 flex flex-wrap gap-x-8 gap-y-3 border-t border-white/15 pt-6 text-xs font-semibold tracking-wide text-white/55">
-              <span>IDEA TO PRODUCT</span>
-              <span>DESIGN TO EXPERIENCE</span>
-              <span>TECHNOLOGY WITH PURPOSE</span>
-            </div>
+  return <SiteShell>
+    <section className="bg-[#17243a] text-white">
+      <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-16 md:px-8 md:py-24 lg:grid-cols-[1.15fr_.85fr]">
+        <div>
+          <p className="kicker text-orange-300">Digital agency · Technology · Training</p>
+          <h1 className="display mt-6 max-w-3xl text-white">Good ideas deserve more than good intentions.</h1>
+          <p className="mt-6 max-w-xl text-base leading-8 text-white/75 md:text-lg">We turn ideas into digital products that work. Dreamshifter Tech Hub designs digital experiences, builds business solutions and helps people develop practical technology skills.</p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link to="/contact" className="inline-flex min-h-12 items-center bg-orange-400 px-5 text-sm font-extrabold text-[#17243a] hover:bg-orange-300">Start a project <ArrowUpRight className="ml-2 size-4"/></Link>
+            <Link to="/services" className="inline-flex min-h-12 items-center border border-white/35 px-5 text-sm font-bold text-white hover:bg-white/10">Explore our services</Link>
           </div>
-          <div className="relative mx-auto w-full max-w-md lg:max-w-none">
-            <div className="relative aspect-[4/4.2] overflow-hidden border border-white/15 bg-[#1c3029] p-6 md:p-8">
-              <div className="absolute inset-0 opacity-40" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px)", backgroundSize: "36px 36px" }} />
-              <div className="relative flex h-full flex-col justify-between">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-bold tracking-[.18em] text-white/55">DREAMSHIFTER / 001</span>
-                  <span className="size-2 rounded-full bg-emerald-300" />
-                </div>
-                <div className="py-8">
-                  <div className="flex size-24 items-center justify-center border border-emerald-300/50 text-5xl font-extrabold tracking-[-.1em] text-orange-300">D.</div>
-                  <p className="mt-8 max-w-xs text-3xl font-extrabold leading-tight tracking-[-.045em]">Ideas deserve to become something real.</p>
-                </div>
-                <div className="flex items-end justify-between border-t border-white/15 pt-5">
-                  <div>
-                    <p className="text-xs text-white/45">OUR FOCUS</p>
-                    <p className="mt-1 text-sm font-bold text-white">Build · Improve · Empower</p>
-                  </div>
-                  <span className="text-xs text-orange-300">DS / TECH HUB</span>
-                </div>
-              </div>
-            </div>
-          </div>
+          <p className="mt-12 border-t border-white/20 pt-5 text-xs font-bold tracking-[.12em] text-white/55">DESIGN · DEVELOPMENT · DIGITAL SOLUTIONS · LEARNING</p>
         </div>
-      </section>
+        <div className="relative border border-white/20 bg-[#202f46] p-7 md:p-9">
+          <p className="text-xs font-bold tracking-[.18em] text-orange-300">DREAMSHIFTER TECH HUB</p>
+          <div className="my-12 border-l-4 border-orange-400 pl-6">
+            <p className="text-4xl font-extrabold leading-tight tracking-[-.04em]">From first thought to first release.</p>
+            <p className="mt-4 max-w-sm text-sm leading-7 text-white/65">Clear thinking. Thoughtful design. Technology that earns its place.</p>
+          </div>
+          <div className="flex items-center justify-between border-t border-white/20 pt-5 text-xs font-semibold text-white/55"><span>FOUNDER-LED</span><span>LAGOS, NIGERIA</span></div>
+        </div>
+      </div>
+    </section>
 
-      <section id="our-work" className="border-b border-line">
-        <Wrap>
-          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
-            <div>
-              <p className="eyebrow">What drives us</p>
-              <h2 className="title mt-4 max-w-md">Technology should move people and ideas forward.</h2>
-            </div>
-            <div className="max-w-2xl">
-              <p className="text-base leading-8 text-muted">
-                We believe meaningful innovation starts with understanding a real need. Our work brings together product thinking, design and technology to create experiences and solutions that are useful, accessible and ready to grow.
-              </p>
-              <p className="mt-4 text-sm leading-7 text-muted">
-                We are building a home for our own products while collaborating on solutions that help businesses, organisations and communities make progress.
-              </p>
-            </div>
-          </div>
-        </Wrap>
-      </section>
+    <Wrap>
+      <div className="grid gap-8 lg:grid-cols-[.8fr_1.2fr]">
+        <div><p className="eyebrow">Why Dreamshifter</p><h2 className="title mt-4 max-w-md">Technology should move your business forward.</h2></div>
+        <div className="max-w-2xl space-y-4 text-sm leading-7 text-muted">
+          <p>A website should do more than look attractive. An app should do more than exist. And technology training should prepare people to do real work.</p>
+          <p>We bring together product design, modern development tools, business-focused problem-solving and practical education. We don't build for appearances. We build to make something work better.</p>
+        </div>
+      </div>
+    </Wrap>
 
-      <section className="border-b border-line bg-card">
-        <Wrap>
-          <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
-            <div>
-              <p className="eyebrow">Our focus areas</p>
-              <h2 className="title mt-4 max-w-xl">From a promising idea to something people can use.</h2>
-            </div>
-            <p className="max-w-sm text-sm leading-6 text-muted">Three connected areas guide the way we think, build and contribute.</p>
-          </div>
-          <div className="mt-10 grid border-t border-line md:grid-cols-3">
-            {PILLARS.map((item, index) => (
-              <article key={item.number} className={`border-b border-line py-7 md:border-b-0 md:px-7 md:py-8 ${index ? "md:border-l" : "md:pl-0"}`}>
-                <span className="text-xs font-extrabold tracking-widest text-brand">{item.number}</span>
-                <h3 className="mt-6 text-xl font-extrabold tracking-tight">{item.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-muted">{item.body}</p>
-              </article>
-            ))}
-          </div>
-        </Wrap>
-      </section>
+    <section className="border-y border-line bg-card">
+      <Wrap>
+        <p className="eyebrow">What we do</p><h2 className="title mt-4 max-w-2xl">The right skills. The right solutions. One place.</h2>
+        <div className="mt-9 grid border-t border-line sm:grid-cols-2">
+          {SERVICES.map(([n,title,body,to]) => <Link key={n} to={to} className="group border-b border-line py-7 sm:px-7 sm:first:pl-0 sm:nth-[2]:border-l">
+            <span className="text-xs font-extrabold tracking-widest text-brand">{n}</span><h3 className="mt-4 text-xl font-extrabold tracking-tight">{title}</h3><p className="mt-2 max-w-sm text-sm leading-7 text-muted">{body}</p><span className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-brand">Explore <ArrowUpRight className="size-4 transition group-hover:translate-x-1"/></span>
+          </Link>)}
+        </div>
+      </Wrap>
+    </section>
 
-      <section className="border-b border-line">
-        <Wrap>
-          <div className="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-            <div>
-              <p className="eyebrow">Built at Dreamshifter</p>
-              <h2 className="title mt-4">Our ideas are designed to go beyond the drawing board.</h2>
-              <p className="mt-4 max-w-lg text-sm leading-7 text-muted">
-                We are developing products and initiatives that put our thinking into practice. Each begins with a problem worth solving and grows through learning, feedback and deliberate execution.
-              </p>
-            </div>
-            <article className="border border-line bg-card p-6 md:p-8">
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <p className="eyebrow">Product in development</p>
-                  <h3 className="mt-3 text-3xl font-extrabold tracking-tight">ShiftNear</h3>
-                </div>
-                <span className="border border-brand/25 bg-tint px-3 py-1 text-xs font-bold text-brand-deep">Coming soon</span>
-              </div>
-              <p className="mt-4 max-w-lg text-sm leading-7 text-muted">
-                A local discovery marketplace being built to help customers find nearby businesses and help vendors become easier to discover.
-              </p>
-              <div className="mt-7 flex flex-wrap gap-3">
-                <Link to="/customers" className="inline-flex min-h-11 items-center bg-brand px-4 text-sm font-bold text-white hover:bg-brand-deep">For customers</Link>
-                <Link to="/vendors" className="inline-flex min-h-11 items-center border border-line px-4 text-sm font-bold hover:bg-tint">For vendors</Link>
-              </div>
-            </article>
-          </div>
-        </Wrap>
-      </section>
+    <Wrap>
+      <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end"><div><p className="eyebrow">Selected work</p><h2 className="title mt-4 max-w-xl">Different industries. Different problems. Purpose-built work.</h2></div><Link to="/projects" className="text-sm font-bold text-brand">View projects <ArrowUpRight className="inline size-4"/></Link></div>
+      <div className="mt-9 grid border-t border-line sm:grid-cols-2">
+        {WORK.map(([name,body],i)=><article key={name} className="border-b border-line py-6 sm:px-7 sm:first:pl-0"><span className="text-xs font-bold text-faint">0{i+1}</span><h3 className="mt-2 font-extrabold">{name}</h3><p className="mt-2 max-w-md text-sm leading-7 text-muted">{body}</p></article>)}
+      </div>
+      <p className="mt-5 text-xs leading-6 text-faint">Selected work includes client projects, design concepts and products in development. Each is labelled according to its current status.</p>
+    </Wrap>
 
-      <section className="border-b border-line bg-[#f7eee7]">
-        <Wrap>
-          <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-center">
-            <div>
-              <p className="eyebrow">Our approach</p>
-              <h2 className="title mt-4 max-w-lg">Build with intention. Learn in the open. Improve continuously.</h2>
-            </div>
-            <ol className="grid gap-5">
-              {[
-                ["Understand", "Start with people, context and the problem that needs solving."],
-                ["Design", "Shape a clear experience and a practical path from idea to execution."],
-                ["Build and learn", "Create, test, listen and keep improving what we put into the world."],
-              ].map(([title, body], i) => (
-                <li key={title} className="grid grid-cols-[2.5rem_1fr] gap-4 border-b border-[#cfddd4] pb-5 last:border-0">
-                  <span className="text-sm font-extrabold text-brand">0{i + 1}</span>
-                  <div>
-                    <h3 className="font-extrabold">{title}</h3>
-                    <p className="mt-1 text-sm leading-6 text-muted">{body}</p>
-                  </div>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </Wrap>
-      </section>
+    <section className="border-y border-line bg-[#f2eee8]">
+      <Wrap>
+        <p className="eyebrow">Built at Dreamshifter</p><h2 className="title mt-4 max-w-2xl">We don't just build for clients. We build our own ideas too.</h2>
+        <div className="mt-8 grid gap-5 md:grid-cols-2">
+          <article className="border border-[#d8d1c8] bg-white p-7"><div className="flex items-center justify-between gap-3"><p className="text-xs font-extrabold tracking-[.15em] text-brand">PRODUCT · PRE-LAUNCH</p><span className="text-xs font-bold text-muted">In development</span></div><h3 className="mt-5 text-3xl font-extrabold tracking-tight">Shiftnear</h3><p className="mt-3 text-sm leading-7 text-muted">A service marketplace being built to connect customers with local experts and vendors. We're preparing for early vendor onboarding.</p><Link to="/shiftnear" className="mt-6 inline-flex items-center text-sm font-bold text-brand">Explore Shiftnear <ArrowUpRight className="ml-2 size-4"/></Link></article>
+          <article className="border border-[#d8d1c8] bg-white p-7"><p className="text-xs font-extrabold tracking-[.15em] text-brand">TALENT INITIATIVE</p><h3 className="mt-5 text-3xl font-extrabold tracking-tight">The DShift Challenge</h3><p className="mt-3 text-sm leading-7 text-muted">A competitive, practical challenge designed to identify emerging tech talent through skill-based tasks and project opportunities.</p><Link to="/challenge" className="mt-6 inline-flex items-center text-sm font-bold text-brand">Discover the challenge <ArrowUpRight className="ml-2 size-4"/></Link></article>
+        </div>
+      </Wrap>
+    </section>
 
-      <section className="bg-ink text-paper">
-        <Wrap>
-          <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
-            <div>
-              <p className="kicker text-orange-300">Let's build what comes next</p>
-              <h2 className="mt-4 max-w-2xl text-3xl leading-tight font-extrabold tracking-[-.045em] md:text-5xl">Have an idea, a challenge or a reason to collaborate?</h2>
-              <p className="mt-4 max-w-xl text-sm leading-7 text-white/65">We would like to hear what you are working on and explore how technology can help move it forward.</p>
-            </div>
-            <Link to="/contact" className="inline-flex min-h-12 shrink-0 items-center bg-orange-400 px-5 text-sm font-extrabold text-ink hover:bg-orange-300">Contact Dreamshifter</Link>
-          </div>
-        </Wrap>
-      </section>
-    </SiteShell>
-  );
+    <section className="bg-[#17243a] text-white"><Wrap><div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between"><div><p className="kicker text-orange-300">Let's make it happen</p><h2 className="mt-4 max-w-2xl text-3xl font-extrabold leading-tight tracking-tight md:text-5xl">Have an idea that needs to become something real?</h2><p className="mt-4 max-w-xl text-sm leading-7 text-white/65">Tell us what you're trying to build, improve or solve. We'll help you work out the next step.</p></div><Link to="/contact" className="inline-flex min-h-12 shrink-0 items-center bg-orange-400 px-5 text-sm font-extrabold text-[#17243a]">Start a conversation <ArrowUpRight className="ml-2 size-4"/></Link></div></Wrap></section>
+  </SiteShell>;
 }
