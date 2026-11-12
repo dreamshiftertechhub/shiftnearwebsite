@@ -31,21 +31,21 @@ function HomePage() {
       <div className="relative mx-auto grid max-w-6xl items-stretch gap-10 px-5 pb-14 pt-16 md:px-8 md:pb-20 md:pt-20 lg:grid-cols-[1.15fr_.85fr]">
         <div className="flex flex-col justify-center">
           <p className="flex items-center gap-3 text-[11px] font-extrabold uppercase tracking-[.22em] text-brand"><span className="h-px w-8 bg-brand"/> Independent digital agency · Nigeria</p>
-          <h1 className="mt-7 max-w-3xl font-display text-[clamp(3.2rem,6.4vw,5.8rem)] font-bold leading-[.98] tracking-[-.065em]">We make digital ideas <span className="text-orange-300">work.</span></h1>
+          <h1 className="mt-7 max-w-3xl font-display text-[clamp(3.2rem,6.4vw,5.8rem)] font-bold leading-[.98] tracking-[-.065em]">We make digital ideas <span className="text-[#f47b20]">work.</span></h1>
           <p className="mt-7 max-w-lg text-base leading-8 text-muted md:text-lg">Dreamshifter designs digital products, builds websites and business systems, and helps people develop skills for the digital world.</p>
-          <div className="mt-9 flex flex-wrap items-center gap-3"><Link to="/contact" className="inline-flex min-h-13 items-center bg-brand px-6 text-sm font-extrabold text-white transition hover:bg-brand-deep">Start a project <ArrowUpRight className="ml-3 size-4"/></Link><Link to="/projects" className="inline-flex min-h-13 items-center border border-white/35 px-6 text-sm font-bold text-ink transition hover:bg-white/10">See our work</Link></div>
+          <div className="mt-9 flex flex-wrap items-center gap-3"><Link to="/contact" className="inline-flex min-h-13 items-center bg-[#f47b20] px-6 text-sm font-extrabold text-white transition hover:bg-[#d96512]">Start a project <ArrowUpRight className="ml-3 size-4"/></Link><Link to="/projects" className="inline-flex min-h-13 items-center border border-[#cbd2de] px-6 text-sm font-bold text-ink transition hover:bg-[#f1f3f7]">See our work</Link></div>
           <div className="mt-14 flex flex-wrap gap-x-7 gap-y-2 border-t border-line pt-5 text-[10px] font-bold uppercase tracking-[.16em] text-faint"><span>Product design</span><span>Web development</span><span>Digital solutions</span><span>Tech education</span></div>
         </div>
         <div className="relative flex min-h-[360px] flex-col justify-between border border-line bg-white p-6 md:min-h-[430px] md:p-8 shadow-[0_18px_55px_rgba(20,43,114,0.06)]">
-          <div className="flex items-start justify-between"><span className="text-[10px] font-extrabold tracking-[.2em] text-white/55">DREAMSHIFTER / 001</span><span className="size-3 rounded-full bg-orange-400"/></div>
+          <div className="flex items-start justify-between"><span className="text-[10px] font-extrabold tracking-[.2em] text-faint">DREAMSHIFTER / 001</span><span className="size-3 rounded-full bg-[#f47b20]"/></div>
           <div className="relative py-8">
-            <div className="absolute -left-8 top-1/2 h-px w-[calc(100%+4rem)] bg-white/15"/>
+            <div className="absolute -left-8 top-1/2 h-px w-[calc(100%+4rem)] bg-[#dce2ec]"/>
             <div className="relative flex aspect-[1.3] max-h-[230px] items-center justify-center border border-[#dce2ec] bg-[#e9edf5]">
-              <span className="select-none font-display text-[clamp(8rem,18vw,13rem)] font-bold leading-none tracking-[-.13em] text-white">D<span className="text-brand">.</span></span>
+              <span className="select-none font-display text-[clamp(8rem,18vw,13rem)] font-bold leading-none tracking-[-.13em] text-[#142b72]">D<span className="text-[#f47b20]">.</span></span>
               <span className="absolute bottom-4 right-4 text-[9px] font-bold uppercase tracking-[.2em] text-faint">01 — 03</span>
             </div>
           </div>
-          <div className="flex items-end justify-between gap-4 border-t border-white/20 pt-5"><div><p className="text-xs font-bold text-orange-300">FOUNDER-LED</p><p className="mt-1 text-xs text-white/55">Design · Delivery · Direction</p></div><p className="text-right text-[10px] font-bold tracking-[.15em] text-white/45">LAGOS<br/>NIGERIA</p></div>
+          <div className="flex items-end justify-between gap-4 border-t border-line pt-5"><div><p className="text-xs font-bold text-[#f47b20]">FOUNDER-LED</p><p className="mt-1 text-xs text-muted">Design · Delivery · Direction</p></div><p className="text-right text-[10px] font-bold tracking-[.15em] text-faint">LAGOS<br/>NIGERIA</p></div>
         </div>
       </div>
       <div className="absolute bottom-0 right-0 hidden h-2 w-[43%] bg-orange-400 lg:block"/>
