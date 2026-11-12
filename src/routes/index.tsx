@@ -63,7 +63,7 @@ function HomePage() {
       <Wrap>
         <p className="eyebrow">What we do</p><h2 className="title mt-4 max-w-2xl">The right skills. The right solutions. One place.</h2>
         <div className="mt-9 grid border-t border-line sm:grid-cols-2">
-          {SERVICES.map(([n,title,body,to]) => <Link key={n} to={to} className="group border-b border-line py-7 sm:px-7 sm:first:pl-0 sm:nth-[2]:border-l">
+          {SERVICES.map(([n,title,body,to]) => <Link key={n} to={to} className="group border-b border-line py-7 sm:px-7 sm:first:pl-0 sm:[&:nth-child(2)]:border-l">
             <span className="text-xs font-extrabold tracking-widest text-brand">{n}</span><h3 className="mt-4 text-xl font-extrabold tracking-tight">{title}</h3><p className="mt-2 max-w-sm text-sm leading-7 text-muted">{body}</p><span className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-brand">Explore <ArrowUpRight className="size-4 transition group-hover:translate-x-1"/></span>
           </Link>)}
         </div>
