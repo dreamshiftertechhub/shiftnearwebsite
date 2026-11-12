@@ -29,7 +29,7 @@ function Success({ title, body, reference }: { title: string; body: string; refe
 function Note() {
   return (
     <p className="text-xs leading-relaxed text-faint">
-      This preview keeps your details on this device and shows them in the team desk. A secure list will be used before any live campaign.
+      This preview saves your details in this browser only. It does not send them to Dreamshifter. A secure submission workflow is needed before these forms collect public enquiries.
     </p>
   );
 }
@@ -66,7 +66,7 @@ export function VendorForm() {
       kind="vendor"
       submitLabel="Register vendor interest"
       successTitle="your vendor interest is saved."
-      successBody="Founding onboarding is free and subject to a completed profile and review. This is not a published listing yet."
+      successBody="Your interest has been recorded for the pre-launch process. This is not a published listing or a promise of customers."
       fields={["name", "phone", "email", "state", "area", "business", "message", "consent"]}
       roleFixed="Vendor"
       consent="I agree that ShiftNear may contact me about founding vendor onboarding."
@@ -96,9 +96,9 @@ export function ContactForm() {
       kind="contact"
       submitLabel="Send enquiry"
       successTitle="your enquiry is saved."
-      successBody="Partnerships, press and support notes are collected here for the ShiftNear team to review."
+      successBody="Your enquiry has been saved in this browser preview. The live Dreamshifter contact workflow still needs to be connected."
       fields={["name", "email", "phone", "topic", "message", "consent"]}
-      consent="I agree that ShiftNear may reply to this enquiry."
+      consent="I agree that Dreamshifter Tech Hub may contact me about this enquiry."
       messageLabel="How can we help?"
     />
   );
@@ -110,7 +110,7 @@ export function ChallengeForm() {
       kind="challenge"
       submitLabel="Notify me"
       successTitle="you’ll hear when it opens."
-      successBody="DSHFT Challenge details are not final. This only saves your interest in the announcement."
+      successBody="The DShift Challenge details are still being finalised. This records your interest in future announcements."
       fields={["name", "email", "phone", "consent"]}
       consent="I agree to be contacted when DSHFT Challenge participation opens."
     />
