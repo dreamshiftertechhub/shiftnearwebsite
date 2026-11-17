@@ -16,8 +16,7 @@ export function SiteHeader() {
   return <header className="sticky top-0 z-20 border-b border-line bg-paper/95 backdrop-blur-md">
     <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5 md:h-[4.5rem] md:px-8">
       <Link to="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
-        <span className="flex size-10 items-center justify-center bg-[#142b72] font-display text-xl font-bold tracking-[-.1em] text-[#f47b20]">D.</span>
-        <span className="leading-tight"><span className="block text-sm font-black tracking-tight text-[#142b72]">DREAMSHIFTER</span><span className="block text-[0.62rem] font-bold tracking-[.19em] text-muted">TECH HUB</span></span>
+        <img src="/media/dreamshifter-logo.png" alt="Dreamshifter Tech Hub" width={512} height={161} className="h-10 w-auto md:h-11"/>
       </Link>
       <nav aria-label="Main" className="hidden items-center gap-5 xl:flex">{LINKS.map(item=><Link key={item.to} to={item.to} activeOptions={{exact:item.to==="/"}} activeProps={{className:"text-sm font-extrabold text-ink"}} inactiveProps={{className:"text-sm font-semibold text-muted hover:text-ink"}}>{item.label}</Link>)}<Link to="/challenge" className="text-sm font-semibold text-muted hover:text-ink">DShift Challenge</Link></nav>
       <div className="flex items-center gap-2"><Link to="/contact" className="hidden min-h-11 items-center bg-[#f47b20] px-4 text-sm font-bold text-white hover:bg-[#d96512] sm:inline-flex">Start a project</Link><button type="button" className="inline-flex size-11 items-center justify-center border border-line xl:hidden" aria-expanded={open} aria-controls="mobile-nav" onClick={()=>setOpen(v=>!v)}><span className="sr-only">{open?"Close menu":"Open menu"}</span>{open?<X className="size-5"/>:<Menu className="size-5"/>}</button></div>

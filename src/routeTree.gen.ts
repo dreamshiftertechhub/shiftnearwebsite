@@ -12,16 +12,18 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as SplatRouteImport } from './routes/$'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as AcademyRouteImport } from './routes/academy'
 import { Route as AdminRouteImport } from './routes/admin'
 import { Route as ChallengeRouteImport } from './routes/challenge'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CustomersRouteImport } from './routes/customers'
 import { Route as DreamshifterRouteImport } from './routes/dreamshifter'
+import { Route as InitiativesRouteImport } from './routes/initiatives'
+import { Route as ProjectsRouteImport } from './routes/projects'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as ShiftnearRouteImport } from './routes/shiftnear'
 import { Route as VendorsRouteImport } from './routes/vendors'
 import { Route as WebinarRouteImport } from './routes/webinar'
-import { Route as ServicesRouteImport } from './routes/services'
-import { Route as ProjectsRouteImport } from './routes/projects'
-import { Route as InitiativesRouteImport } from './routes/initiatives'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -36,6 +38,11 @@ const SplatRoute = SplatRouteImport.update({
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AcademyRoute = AcademyRouteImport.update({
+  id: '/academy',
+  path: '/academy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminRoute = AdminRouteImport.update({
@@ -63,6 +70,26 @@ const DreamshifterRoute = DreamshifterRouteImport.update({
   path: '/dreamshifter',
   getParentRoute: () => rootRouteImport,
 } as any)
+const InitiativesRoute = InitiativesRouteImport.update({
+  id: '/initiatives',
+  path: '/initiatives',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsRoute = ProjectsRouteImport.update({
+  id: '/projects',
+  path: '/projects',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShiftnearRoute = ShiftnearRouteImport.update({
+  id: '/shiftnear',
+  path: '/shiftnear',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const VendorsRoute = VendorsRouteImport.update({
   id: '/vendors',
   path: '/vendors',
@@ -73,67 +100,58 @@ const WebinarRoute = WebinarRouteImport.update({
   path: '/webinar',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ServicesRoute = ServicesRouteImport.update({
-  id: '/services',
-  path: '/services',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProjectsRoute = ProjectsRouteImport.update({
-  id: '/projects',
-  path: '/projects',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const InitiativesRoute = InitiativesRouteImport.update({
-  id: '/initiatives',
-  path: '/initiatives',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$': typeof SplatRoute
   '/about': typeof AboutRoute
+  '/academy': typeof AcademyRoute
   '/admin': typeof AdminRoute
   '/challenge': typeof ChallengeRoute
   '/contact': typeof ContactRoute
   '/customers': typeof CustomersRoute
   '/dreamshifter': typeof DreamshifterRoute
+  '/initiatives': typeof InitiativesRoute
+  '/projects': typeof ProjectsRoute
+  '/services': typeof ServicesRoute
+  '/shiftnear': typeof ShiftnearRoute
   '/vendors': typeof VendorsRoute
   '/webinar': typeof WebinarRoute
-  '/services': typeof ServicesRoute
-  '/projects': typeof ProjectsRoute
-  '/initiatives': typeof InitiativesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/$': typeof SplatRoute
   '/about': typeof AboutRoute
+  '/academy': typeof AcademyRoute
   '/admin': typeof AdminRoute
   '/challenge': typeof ChallengeRoute
   '/contact': typeof ContactRoute
   '/customers': typeof CustomersRoute
   '/dreamshifter': typeof DreamshifterRoute
+  '/initiatives': typeof InitiativesRoute
+  '/projects': typeof ProjectsRoute
+  '/services': typeof ServicesRoute
+  '/shiftnear': typeof ShiftnearRoute
   '/vendors': typeof VendorsRoute
   '/webinar': typeof WebinarRoute
-  '/services': typeof ServicesRoute
-  '/projects': typeof ProjectsRoute
-  '/initiatives': typeof InitiativesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/$': typeof SplatRoute
   '/about': typeof AboutRoute
+  '/academy': typeof AcademyRoute
   '/admin': typeof AdminRoute
   '/challenge': typeof ChallengeRoute
   '/contact': typeof ContactRoute
   '/customers': typeof CustomersRoute
   '/dreamshifter': typeof DreamshifterRoute
+  '/initiatives': typeof InitiativesRoute
+  '/projects': typeof ProjectsRoute
+  '/services': typeof ServicesRoute
+  '/shiftnear': typeof ShiftnearRoute
   '/vendors': typeof VendorsRoute
   '/webinar': typeof WebinarRoute
-  '/services': typeof ServicesRoute
-  '/projects': typeof ProjectsRoute
-  '/initiatives': typeof InitiativesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -141,62 +159,70 @@ export interface FileRouteTypes {
     | '/'
     | '/$'
     | '/about'
+    | '/academy'
     | '/admin'
     | '/challenge'
     | '/contact'
     | '/customers'
     | '/dreamshifter'
+    | '/initiatives'
+    | '/projects'
+    | '/services'
+    | '/shiftnear'
     | '/vendors'
     | '/webinar'
-    | '/services'
-    | '/projects'
-    | '/initiatives'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/$'
     | '/about'
+    | '/academy'
     | '/admin'
     | '/challenge'
     | '/contact'
     | '/customers'
     | '/dreamshifter'
+    | '/initiatives'
+    | '/projects'
+    | '/services'
+    | '/shiftnear'
     | '/vendors'
     | '/webinar'
-    | '/services'
-    | '/projects'
-    | '/initiatives'
   id:
     | '__root__'
     | '/'
     | '/$'
     | '/about'
+    | '/academy'
     | '/admin'
     | '/challenge'
     | '/contact'
     | '/customers'
     | '/dreamshifter'
+    | '/initiatives'
+    | '/projects'
+    | '/services'
+    | '/shiftnear'
     | '/vendors'
     | '/webinar'
-    | '/services'
-    | '/projects'
-    | '/initiatives'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   SplatRoute: typeof SplatRoute
   AboutRoute: typeof AboutRoute
+  AcademyRoute: typeof AcademyRoute
   AdminRoute: typeof AdminRoute
   ChallengeRoute: typeof ChallengeRoute
   ContactRoute: typeof ContactRoute
   CustomersRoute: typeof CustomersRoute
   DreamshifterRoute: typeof DreamshifterRoute
+  InitiativesRoute: typeof InitiativesRoute
+  ProjectsRoute: typeof ProjectsRoute
+  ServicesRoute: typeof ServicesRoute
+  ShiftnearRoute: typeof ShiftnearRoute
   VendorsRoute: typeof VendorsRoute
   WebinarRoute: typeof WebinarRoute
-  ServicesRoute: typeof ServicesRoute
-  ProjectsRoute: typeof ProjectsRoute
-  InitiativesRoute: typeof InitiativesRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -220,6 +246,13 @@ declare module '@tanstack/react-router' {
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/academy': {
+      id: '/academy'
+      path: '/academy'
+      fullPath: '/academy'
+      preLoaderRoute: typeof AcademyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin': {
@@ -257,6 +290,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DreamshifterRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/initiatives': {
+      id: '/initiatives'
+      path: '/initiatives'
+      fullPath: '/initiatives'
+      preLoaderRoute: typeof InitiativesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects': {
+      id: '/projects'
+      path: '/projects'
+      fullPath: '/projects'
+      preLoaderRoute: typeof ProjectsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shiftnear': {
+      id: '/shiftnear'
+      path: '/shiftnear'
+      fullPath: '/shiftnear'
+      preLoaderRoute: typeof ShiftnearRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/vendors': {
       id: '/vendors'
       path: '/vendors'
@@ -271,9 +332,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WebinarRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/services': { id: '/services'; path: '/services'; fullPath: '/services'; preLoaderRoute: typeof ServicesRouteImport; parentRoute: typeof rootRouteImport }
-    '/projects': { id: '/projects'; path: '/projects'; fullPath: '/projects'; preLoaderRoute: typeof ProjectsRouteImport; parentRoute: typeof rootRouteImport }
-    '/initiatives': { id: '/initiatives'; path: '/initiatives'; fullPath: '/initiatives'; preLoaderRoute: typeof InitiativesRouteImport; parentRoute: typeof rootRouteImport }
   }
 }
 
@@ -281,16 +339,18 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   SplatRoute: SplatRoute,
   AboutRoute: AboutRoute,
+  AcademyRoute: AcademyRoute,
   AdminRoute: AdminRoute,
   ChallengeRoute: ChallengeRoute,
   ContactRoute: ContactRoute,
   CustomersRoute: CustomersRoute,
   DreamshifterRoute: DreamshifterRoute,
+  InitiativesRoute: InitiativesRoute,
+  ProjectsRoute: ProjectsRoute,
+  ServicesRoute: ServicesRoute,
+  ShiftnearRoute: ShiftnearRoute,
   VendorsRoute: VendorsRoute,
   WebinarRoute: WebinarRoute,
-  ServicesRoute: ServicesRoute,
-  ProjectsRoute: ProjectsRoute,
-  InitiativesRoute: InitiativesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

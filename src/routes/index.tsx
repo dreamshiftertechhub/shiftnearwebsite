@@ -17,6 +17,12 @@ const SERVICES = [
   ["04", "Tech training", "Hands-on learning in product design, web creation and digital skills.", "/academy"],
 ];
 
+const NOW = [
+  ["Live webinar · 1 December","The 2027 Blueprint","/webinar"],
+  ["Product · pre-launch","Shiftnear marketplace","/shiftnear"],
+  ["Talent initiative","The DShift Challenge","/challenge"],
+];
+
 const WORK = [
   ["Hospitality", "Web experiences and digital systems for restaurants and coffee shops."],
   ["Real estate", "Property websites designed to present listings and generate enquiries."],
@@ -31,25 +37,24 @@ function HomePage() {
       <div className="relative mx-auto grid max-w-6xl items-stretch gap-10 px-5 pb-14 pt-16 md:px-8 md:pb-20 md:pt-20 lg:grid-cols-[1.15fr_.85fr]">
         <div className="flex flex-col justify-center">
           <p className="flex items-center gap-3 text-[11px] font-extrabold uppercase tracking-[.22em] text-brand"><span className="h-px w-8 bg-brand"/> Independent digital agency · Nigeria</p>
-          <h1 className="mt-7 max-w-3xl font-display text-[clamp(3.2rem,6.4vw,5.8rem)] font-bold leading-[.98] tracking-[-.065em]">We make digital ideas <span className="text-[#f47b20]">work.</span></h1>
+          <h1 className="mt-7 max-w-3xl font-display text-[clamp(2.7rem,5.2vw,4.7rem)] font-bold leading-[.98] tracking-[-.065em]">We make digital ideas <span className="text-[#f47b20]">work.</span></h1>
           <p className="mt-7 max-w-lg text-base leading-8 text-muted md:text-lg">Dreamshifter designs digital products, builds websites and business systems, and helps people develop skills for the digital world.</p>
           <div className="mt-9 flex flex-wrap items-center gap-3"><Link to="/contact" className="inline-flex min-h-13 items-center bg-[#f47b20] px-6 text-sm font-extrabold text-white transition hover:bg-[#d96512]">Start a project <ArrowUpRight className="ml-3 size-4"/></Link><Link to="/projects" className="inline-flex min-h-13 items-center border border-[#cbd2de] px-6 text-sm font-bold text-ink transition hover:bg-[#f1f3f7]">See our work</Link></div>
           <div className="mt-14 flex flex-wrap gap-x-7 gap-y-2 border-t border-line pt-5 text-[10px] font-bold uppercase tracking-[.16em] text-faint"><span>Product design</span><span>Web development</span><span>Digital solutions</span><span>Tech education</span></div>
         </div>
-        <div className="relative flex min-h-[360px] flex-col justify-between border border-line bg-white p-6 md:min-h-[430px] md:p-8 shadow-[0_18px_55px_rgba(20,43,114,0.06)]">
-          <div className="flex items-start justify-between"><span className="text-[10px] font-extrabold tracking-[.2em] text-faint">DREAMSHIFTER / 001</span><span className="size-3 rounded-full bg-[#f47b20]"/></div>
-          <div className="relative py-8">
-            <div className="absolute -left-8 top-1/2 h-px w-[calc(100%+4rem)] bg-[#dce2ec]"/>
-            <div className="relative flex aspect-[1.3] max-h-[230px] items-center justify-center border border-[#dce2ec] bg-[#e9edf5]">
-              <span className="select-none font-display text-[clamp(8rem,18vw,13rem)] font-bold leading-none tracking-[-.13em] text-[#142b72]">D<span className="text-[#f47b20]">.</span></span>
-              <span className="absolute bottom-4 right-4 text-[9px] font-bold uppercase tracking-[.2em] text-faint">01 — 03</span>
-            </div>
+        <figure className="relative mb-8 self-center lg:mb-6">
+          <div className="border border-line bg-white p-2 shadow-[0_24px_60px_rgba(20,43,114,0.12)]">
+            <img src="/media/ayinde.jpg" alt="Ayinde Emmanuel Olatunde, founder of Dreamshifter Tech Hub" width={760} height={950} fetchPriority="high" className="aspect-[4/5] w-full object-cover object-[50%_18%]"/>
           </div>
-          <div className="flex items-end justify-between gap-4 border-t border-line pt-5"><div><p className="text-xs font-bold text-[#f47b20]">FOUNDER-LED</p><p className="mt-1 text-xs text-muted">Design · Delivery · Direction</p></div><p className="text-right text-[10px] font-bold tracking-[.15em] text-faint">LAGOS<br/>NIGERIA</p></div>
-        </div>
+          <figcaption className="absolute -bottom-6 left-4 right-4 flex items-center justify-between gap-4 border border-line bg-white px-5 py-4 shadow-[0_12px_30px_rgba(20,43,114,0.10)] md:right-auto md:min-w-[300px] lg:-left-8">
+            <div><p className="text-sm font-extrabold text-ink">Ayinde Emmanuel Olatunde</p><p className="mt-0.5 text-xs text-muted">Founder · Digital Product Specialist · Project Manager</p></div>
+            <span className="h-9 w-1 shrink-0 bg-[#f47b20]"/>
+          </figcaption>
+        </figure>
       </div>
-      <div className="absolute bottom-0 right-0 hidden h-2 w-[43%] bg-orange-400 lg:block"/>
-    </section>
+          </section>
+
+    <section className="border-b border-line bg-white"><div className="mx-auto grid max-w-6xl px-5 md:grid-cols-3 md:px-8">{NOW.map(([tag,title,to],i)=><Link key={title} to={to} className={"group flex items-center justify-between gap-4 border-line py-5 "+(i?"border-t md:border-l md:border-t-0 md:pl-7":"")}><div><p className="text-[10px] font-extrabold uppercase tracking-[.16em] text-[#f47b20]">{tag}</p><p className="mt-1 text-sm font-extrabold text-ink">{title}</p></div><ArrowUpRight className="size-4 shrink-0 text-faint transition group-hover:text-brand"/></Link>)}</div></section>
 
     <Wrap>
       <div className="grid gap-8 lg:grid-cols-[.8fr_1.2fr]">
@@ -64,6 +69,6 @@ function HomePage() {
 
     <section className="border-y border-line bg-[#f3f5f8]"><Wrap><p className="eyebrow">Built at Dreamshifter</p><h2 className="title mt-4 max-w-2xl">We develop our own products and talent initiatives, too.</h2><div className="mt-8 grid gap-5 md:grid-cols-2"><article className="border border-line bg-white p-7"><div className="flex items-center justify-between"><p className="text-xs font-extrabold tracking-[.15em] text-brand">PRODUCT · PRE-LAUNCH</p><span className="text-xs font-bold text-muted">In development</span></div><h3 className="mt-5 text-3xl font-extrabold tracking-tight">Shiftnear</h3><p className="mt-3 text-sm leading-7 text-muted">A service marketplace being built to connect customers with local experts and vendors. Early vendor onboarding is being prepared.</p><Link to="/shiftnear" className="mt-6 inline-flex items-center text-sm font-bold text-brand">Explore Shiftnear <ArrowUpRight className="ml-2 size-4"/></Link></article><article className="border border-[#d7dce9] bg-white p-7"><p className="text-xs font-extrabold tracking-[.15em] text-brand">TALENT INITIATIVE</p><h3 className="mt-5 text-3xl font-extrabold tracking-tight">The DShift Challenge</h3><p className="mt-3 text-sm leading-7 text-muted">A practical competition designed to identify emerging tech talent through skill-based tasks and project opportunities.</p><Link to="/challenge" className="mt-6 inline-flex items-center text-sm font-bold text-brand">Discover the challenge <ArrowUpRight className="ml-2 size-4"/></Link></article></div></Wrap></section>
 
-    <section className="bg-[#142b72] text-white"><Wrap><div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between"><div><p className="kicker text-orange-300">Have a project in mind?</p><h2 className="mt-4 max-w-2xl font-display text-3xl font-bold leading-tight tracking-tight md:text-5xl">Let's turn the next idea into something useful.</h2><p className="mt-4 max-w-xl text-sm leading-7 text-muted">Tell us what you're trying to build, improve or solve. We'll help you work out the next step.</p></div><Link to="/contact" className="inline-flex min-h-13 shrink-0 items-center bg-[#f47b20] px-5 text-sm font-extrabold text-[#142b72]">Start a conversation <ArrowUpRight className="ml-2 size-4"/></Link></div></Wrap></section>
+    <section className="bg-[#142b72] text-white"><Wrap><div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between"><div><p className="kicker text-orange-300">Have a project in mind?</p><h2 className="mt-4 max-w-2xl font-display text-3xl font-bold leading-tight tracking-tight md:text-5xl">Let's turn the next idea into something useful.</h2><p className="mt-4 max-w-xl text-sm leading-7 text-white/75">Tell us what you're trying to build, improve or solve. We'll help you work out the next step.</p></div><Link to="/contact" className="inline-flex min-h-13 shrink-0 items-center bg-[#f47b20] px-5 text-sm font-extrabold text-[#142b72]">Start a conversation <ArrowUpRight className="ml-2 size-4"/></Link></div></Wrap></section>
   </SiteShell>;
 }
